@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\createJob;
+use App\createJob2;
 
-class createJobController extends Controller
+class createJob2Controller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class createJobController extends Controller
      */
     public function index()
     {
-        return view('createJob');
+        return view('createJob2');
     }
 
     /**
@@ -24,7 +24,7 @@ class createJobController extends Controller
      */
     public function create()
     {
-       
+        //
     }
 
     /**
@@ -36,33 +36,18 @@ class createJobController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-             'name' => 'required',
-             'education' => 'required',
-             'currentJob' => 'required',
-             'currentJobTime' => 'required',
-             'previousJob' => 'required',
-             'previousJobTime' => 'required',
-             'location' => 'required',
-             'areaOfWork' => 'required',
-             'jobPreference' => 'required',  
-             'skills' => 'required'
-        ]);
-        
-        $post = new createJob;    
-        $post->name = $request->input('name');
-        $post->education = $request->input('education');
-        $post->currentJob = $request->input('currentJob');
-        $post->currentJobTime = $request->input('currentJobTime');
-        $post->previousJob = $request->input('previousJob');
-        $post->previousJobTime = $request->input('previousJobTime');
-        $post->location = $request->input('location');
-        $post->areaOfWork = $request->input('areaOfWork');
-        $post->jobPreference = $request->input('jobPreference');
-        $post->skills = $request->input('skills');
-        $post->save();
+            'skill1' => 'required'
+            ]);
 
-        return redirect('/createJob2');
+            $post = new createJob2; 
+            $post->skill1 = $request->input('skill1');
+            $post->skill2 = $request->input('skill2');
+            $post->skill3 = $request->input('skill3');
+            $post->skill4 = $request->input('skill4');
+            $post->skill5 = $request->input('skill5');
+            $post->save();
 
+            return redirect('/');
     }
 
     /**

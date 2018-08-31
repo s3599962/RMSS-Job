@@ -53,7 +53,7 @@
     {{Form::text('skills', '', ['class' => 'form-control'])}}
     </div>
 
-    {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
+    {{Form::submit('next page', ['class'=>'btn btn-primary'])}}
 {!! Form::close() !!}
 
 @endsection

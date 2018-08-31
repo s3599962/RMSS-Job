@@ -19,6 +19,7 @@ Route::get('/home', function (){
 })->name('index');
 
 Route::resource('createJob', 'createJobController');
+Route::resource('createJob2', 'createJob2Controller');
 
 Route::get('/', function () {
     return view('index');
