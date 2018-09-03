@@ -15,6 +15,7 @@ class CreateJobTable extends Migration
     {
         Schema::create('job', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('userID');
             $table->string('name');
             $table->string('education');
             $table->string('currentJob');
@@ -24,7 +25,6 @@ class CreateJobTable extends Migration
             $table->string('location');
             $table->string('areaOfWork');
             $table->string('jobPreference');
-            $table->string('skills');
         });
     }
 

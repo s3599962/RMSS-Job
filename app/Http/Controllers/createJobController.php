@@ -44,8 +44,7 @@ class createJobController extends Controller
              'previousJobTime' => 'required',
              'location' => 'required',
              'areaOfWork' => 'required',
-             'jobPreference' => 'required',  
-             'skills' => 'required'
+             'jobPreference' => 'required'
         ]);
         
         $post = new createJob;    
@@ -58,7 +57,7 @@ class createJobController extends Controller
         $post->location = $request->input('location');
         $post->areaOfWork = $request->input('areaOfWork');
         $post->jobPreference = $request->input('jobPreference');
-        $post->skills = $request->input('skills');
+        $post->userID = auth()->user()->id;
         $post->save();
 
         return redirect('/createJob2');

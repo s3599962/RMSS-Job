@@ -45,6 +45,12 @@ class createJob2Controller extends Controller
             $post->skill3 = $request->input('skill3');
             $post->skill4 = $request->input('skill4');
             $post->skill5 = $request->input('skill5');
+            $post->skill6 = $request->input('skill6');
+            $post->skill7 = $request->input('skill7');
+            $post->skill8 = $request->input('skill8');
+            $post->skill9 = $request->input('skill9');
+            $post->skill10 = $request->input('skill10');
+            $post->userID = auth()->user()->id;
             $post->save();
 
             return redirect('/');

@@ -48,10 +48,7 @@
     {{Form::text('jobPreference', '', ['class' => 'form-control'])}}
     </div>
 
-    <div class="form-group">
-    {{Form::label('skills', 'skills')}}
-    {{Form::text('skills', '', ['class' => 'form-control'])}}
-    </div>
+
 
     {{Form::submit('next page', ['class'=>'btn btn-primary'])}}
 {!! Form::close() !!}
