@@ -60,6 +60,10 @@ class UserController extends Controller
       else
           return redirect()->back()->withInput();
     }
+    public function show($id){
+      $data['users'] = User::all();
+      dd($data);
+    }
     public function destory($id)
     {
       $user = User::find($id);
